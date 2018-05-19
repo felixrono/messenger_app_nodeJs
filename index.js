@@ -94,22 +94,22 @@ function sendGenericMessage(sender) {
 			"payload": {
 				"template_type": "generic",
 				"elements": [{
-					"title": "First card",
-					"subtitle": "Element #1 of an hscroll",
+					"title": "Fashion",
+					"subtitle": "Shop For Fashio",
 					"image_url": "https://images.wallpaperscraft.com/image/pair_style_fashion_photoshoot_96935_1920x1080.jpg",
 					"buttons": [{
 						"type": "web_url",
 						"url": "https://www.messenger.com",
-						"title": "web url"
+						"title": "Check Our Website"
 					}, {
 						"type": "postback",
 						"title": "Postback",
 						"payload": "Payload for first element in a generic bubble",
 					}],
 				}, {
-					"title": "Second card",
-					"subtitle": "Element #2 of an hscroll",
-					"image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
+					"title": "Technology",
+					"subtitle": "Shop For Tech",
+					"image_url": "https://images.wallpaperscraft.com/image/processor_cpu_upgrade_installation_chip_robot_5633_1920x1080.jpg",
 					"buttons": [{
 						"type": "postback",
 						"title": "Postback",
