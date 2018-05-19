@@ -47,7 +47,7 @@ app.post('/webhook/', function (req, res) {
 			let text = event.message.text
 			if (text === 'Generic'){ 
 				console.log("welcome to chatbot")
-				//sendGenericMessage(sender)
+				sendGenericMessage(sender)
 				continue
 			}
 			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
@@ -64,7 +64,8 @@ app.post('/webhook/', function (req, res) {
 
 // recommended to inject access tokens as environmental variables, e.g.
 // const token = process.env.FB_PAGE_ACCESS_TOKEN
-const token = "EAACkQAMZBH1YBANkysZCZBv6o82xvZABkTosb3ZCovqZC0smvoEX33tWgWPhBM9f7CqJ83ZBxMepwi955F3vBumKyG3FZBYn9nyIGZAHFhnMOU8ZCsDpZCS1xFskmG5lGqjOy8bELcvDZBfoFoz5tyeVCaSKsFcyqVtcSHA5z6Q0vux6JkeUEZCZAjFWCp"
+const token = "EAACkQAMZBH1YBAG6htBzIK9gus0cyouR7UV0pFItFrZBSkq6DoTdmDVXxW8iVSKPTpkXl7i6dZCzL0bypcDl7V3nMDOUh8AkCXoRgWaory4xZBbs7eqcXl5ZCU8ZB8LYCUw4HjcujCkDHJZAdHmThxGWgqlDTBxPy8MqiZBITTJBZAv2hMlLCkkK5"
+
 
 function sendTextMessage(sender, text) {
 	let messageData = { text:text }
