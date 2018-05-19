@@ -46,7 +46,7 @@ app.post('/webhook/', function (req, res) {
 		if (event.message && event.message.text) {
 			let text = event.message.text
 			let payload = event.message.payload
-			if (payload === 'USER_DEFINED_PAYLOAD'){ 
+			if (text === 'Get Started'){ 
 				console.log("welcome to chatbot")
 				sendGenericMessage(sender)
 				continue
