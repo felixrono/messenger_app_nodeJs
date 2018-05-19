@@ -46,13 +46,20 @@ app.post('/webhook/', function (req, res) {
 		if (event.message && event.message.text) {
 			let text = event.message.text
 			let payload = event.message.payload
-			if (text === 'Get Started'){ 
+			if (text === 'Generic'){ 
 				console.log("welcome to chatbot")
 				sendGenericMessage(sender)
 				continue
 			}
 			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
 		}
+
+		   if(event.postback && event.postback.payload === USER_DEFINED_PAYLOAD )
+        {
+                //present user with some greeting or call to action
+                var msg = "Hi ,I'm a Bot ,and I was created to help you easily .... "
+                //sendMessage(event.sender.id,msg);      
+        } 
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
 			sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
